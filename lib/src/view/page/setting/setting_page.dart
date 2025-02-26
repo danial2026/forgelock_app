@@ -48,7 +48,7 @@ class _SettingPageState extends State<SettingPage> {
               children: [
                 Column(
                   children: [
-                    const SizedBox(height: AppPadding.xxLarge),
+                    const SizedBox(height: AppPadding.xxxLarge),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

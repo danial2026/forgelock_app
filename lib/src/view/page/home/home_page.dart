@@ -168,6 +168,10 @@ class _HomePageState extends State<HomePage> {
                                   NavigatorController.pushWithoutState(context, SettingPage.routeName);
                                 },
                               )),
+                          Text(
+                            AppLocalizations.of(context)!.appName,
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          ),
                           Padding(
                             padding: const EdgeInsets.only(right: AppPadding.medium),
                             child: TextButton(
