@@ -1,0 +1,7 @@
+{
+    "projectName": "forgelock_app",
+    "namespace": "forgelock_app.Contracts",
+    "lang": 0,
+    "autoCodeGen": true,
+    "projectPath": "../"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ForgeLock",
+  "short_name": "ForgeLock",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#151520",
+  "theme_color": "#151520",
+  "description": "ForgeLock PWA",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "@@locale": "en",
+  "appName": "ForgeLock",
+  "serverNotResponding": "Server Not Responding",
+  "serverNotRespondingDescription": "The server is not responding. Please try again later.",
+  "tryAgain": "Try Again",
+  "settings": "Settings",
+  "theme": "Theme",
+  "systemTheme": "System Theme",
+  "lightTheme": "Light Theme",
+  "darkTheme": "Dark Theme",
+  "language": "Language",
+  "english": "English",
+  "japanese": "Japanese",
+  "font": "Font",
+  "doYouWantToExit": "Do you want to exit?",
+  "cancel": "Cancel",
+  "ok": "OK",
+  "password": "Password",
+  "passwordCopiedToClipboard": "Password copied to clipboard",
+  "generatedInMs": "Generated in {ms}ms",
+  "@generatedInMs": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "done": "Done",
+  "reset": "Reset",
+  "textFields": "Text Fields",
+  "dateFields": "Date Fields",
+  "numberFields": "Number Fields",
+  "generatePassword": "Generate Password",
+  "hasSpecialChars": "Has Special Chars",
+  "firstWordOrPhrase": "first word or phrase",
+  "secondWordOrPhrase": "2nd word or phrase",
+  "nthWordOrPhrase": "{n}th word or phrase",
+  "@nthWordOrPhrase": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "customWordOrPhrase": "custom word or phrase",
+  "selectDate": "Select Date",
+  "firstNumber": "first number",
+  "secondNumber": "2nd number",
+  "nthNumber": "{n}th number",
+  "@nthNumber": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "customNumber": "custom number",
+  "passwordLength": "Password Length"
+}

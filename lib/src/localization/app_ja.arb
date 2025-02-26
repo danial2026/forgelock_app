@@ -1,0 +1,60 @@
+{
+  "@@locale": "ja",
+  "appName": "ForgeLock",
+  "serverNotResponding": "サーバーが応答していません",
+  "serverNotRespondingDescription": "サーバーが応答していません。後でもう一度お試しください。",
+  "tryAgain": "もう一度試す",
+  "settings": "設定",
+  "theme": "テーマ",
+  "systemTheme": "システムテーマ",
+  "lightTheme": "ライトテーマ",
+  "darkTheme": "ダークテーマ",
+  "language": "言語",
+  "english": "英語",
+  "japanese": "日本語",
+  "font": "フォント",
+  "doYouWantToExit": "終了しますか？",
+  "cancel": "キャンセル",
+  "ok": "OK",
+  "password": "パスワード",
+  "passwordCopiedToClipboard": "パスワードをクリップボードにコピーしました",
+  "generatedInMs": "{ms}ミリ秒で生成されました",
+  "@generatedInMs": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "done": "完了",
+  "reset": "リセット",
+  "textFields": "テキストフィールド",
+  "dateFields": "日付フィールド", 
+  "numberFields": "数値フィールド",
+  "generatePassword": "パスワードを生成",
+  "hasSpecialChars": "特殊文字を含む",
+  "firstWordOrPhrase": "1番目の単語またはフレーズ",
+  "secondWordOrPhrase": "2番目の単語またはフレーズ",
+  "nthWordOrPhrase": "{n}番目の単語またはフレーズ",
+  "@nthWordOrPhrase": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "customWordOrPhrase": "カスタムの単語またはフレーズ",
+  "selectDate": "日付を選択",
+  "firstNumber": "1番目の数字",
+  "secondNumber": "2番目の数字", 
+  "nthNumber": "{n}番目の数字",
+  "@nthNumber": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "customNumber": "カスタムの数字",
+  "passwordLength": "パスワードの長さ"
+}
