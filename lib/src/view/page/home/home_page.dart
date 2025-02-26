@@ -179,6 +179,8 @@ class _HomePageState extends State<HomePage> {
                                   numberFieldControllers.clear();
                                   dateTimeCount = 0;
                                   dateTimeList.clear();
+                                  hasSpecialChars = true;
+                                  _passwordLength = 16;
                                 });
                               },
                               child: Text(
