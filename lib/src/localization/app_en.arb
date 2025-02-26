@@ -56,5 +56,8 @@
     }
   },
   "customNumber": "custom number",
-  "passwordLength": "Password Length"
+  "passwordLength": "Password Length",
+  "visitWebsite": "🌐 Visit Website",
+  "contactDeveloper": "📧 Contact Developer",
+  "sourceCode": "💻 Source Code"
 }

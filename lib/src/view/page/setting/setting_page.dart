@@ -7,6 +7,8 @@ import 'package:forgelock/src/view/common/custom_scaffold.dart';
 import 'package:forgelock/src/view/common/custom_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:forgelock/src/view/page/home/home_page.dart';
+import 'package:forgelock/src/view/widget/button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key, required this.appPreferencesController});
@@ -43,7 +45,7 @@ class _SettingPageState extends State<SettingPage> {
             alignment: Alignment.topCenter,
             padding: const EdgeInsets.symmetric(horizontal: AppPadding.xLarge),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
@@ -157,6 +159,55 @@ class _SettingPageState extends State<SettingPage> {
                         ),
                       ],
                     ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customSecondaryButton(
+                          context,
+                          widget.appPreferencesController,
+                          text: AppLocalizations.of(context)!.visitWebsite,
+                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
+                          onTap: () {
+                            launchUrl(Uri.parse('https://danials.space/'));
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppPadding.large),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customSecondaryButton(
+                          context,
+                          widget.appPreferencesController,
+                          text: AppLocalizations.of(context)!.contactDeveloper,
+                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
+                          onTap: () {
+                            launchUrl(Uri.parse('https://danials.space/contact'));
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppPadding.large),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customSecondaryButton(
+                          context,
+                          widget.appPreferencesController,
+                          text: AppLocalizations.of(context)!.sourceCode,
+                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
+                          onTap: () {
+                            launchUrl(Uri.parse('https://github.com/danial2026/forgelock_app'));
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppPadding.xxxLarge),
                   ],
                 ),
               ],
