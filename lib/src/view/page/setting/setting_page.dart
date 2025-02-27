@@ -144,6 +144,10 @@ class _SettingPageState extends State<SettingPage> {
                           },
                           items: [
                             DropdownMenuItem(
+                              value: FontName.Roboto.name,
+                              child: Text(FontName.Roboto.name),
+                            ),
+                            DropdownMenuItem(
                               value: FontName.Akeila.name,
                               child: Text(FontName.Akeila.name),
                             ),

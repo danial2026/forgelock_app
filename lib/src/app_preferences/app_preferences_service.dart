@@ -46,6 +46,7 @@ class AppPreferencesService extends GetxController {
 }
 
 enum FontName {
+  Roboto,
   Akeila,
   Mod20,
   TimelessMemories,

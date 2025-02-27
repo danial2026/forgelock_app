@@ -1,15 +1,3 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
-final DotEnv _envDetails = DotEnv();
-
-Future<void> load(String address) async {
-  await _envDetails.load(fileName: address);
-}
-
-String read(String key) {
-  return _envDetails.env[key]!;
-}
-
 // Read APP_ENV from parameter
 // e.g. flutter run --dart-define=APP_ENV=staging
 const _appEnv = String.fromEnvironment('APP_ENV', defaultValue: 'dev');

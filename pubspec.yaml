@@ -56,7 +56,6 @@ dependencies:
   logger: ^2.4.0
   loggy: ^2.0.3
   bloc: ^8.1.4
-  flutter_dotenv: ^5.1.0
   validators: ^3.0.0
   json_annotation: ^4.9.0
   pull_to_refresh: ^2.0.0
@@ -178,3 +177,6 @@ flutter:
     - family: Akeila
       fonts:
         - asset: assets/font/Akeila.otf
+    - family: Roboto
+      fonts:
+        - asset: assets/font/Roboto-Regular.ttf
