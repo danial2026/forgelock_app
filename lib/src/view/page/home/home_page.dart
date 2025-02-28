@@ -537,18 +537,17 @@ class _HomePageState extends State<HomePage> {
                     width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 2 - 48,
                   ),
                 ),
-                if (i > 2)
-                  IconButton(
-                    icon: const Icon(Icons.remove),
-                    iconSize: 36.0,
-                    color: widget.appPreferencesController.getThemeData().colorScheme.primary,
-                    onPressed: () {
-                      setState(() {
-                        numberCount--;
-                        numberFieldControllers.removeAt(i);
-                      });
-                    },
-                  ),
+                IconButton(
+                  icon: const Icon(Icons.remove),
+                  iconSize: 36.0,
+                  color: widget.appPreferencesController.getThemeData().colorScheme.primary,
+                  onPressed: () {
+                    setState(() {
+                      numberCount--;
+                      numberFieldControllers.removeAt(i);
+                    });
+                  },
+                ),
               ],
             ),
           ],

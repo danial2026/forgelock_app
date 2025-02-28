@@ -239,10 +239,18 @@ abstract class _PasswordGeneratorBloc extends Bloc<PasswordGeneratorEvent, Passw
   Future<void> _mapRequestedToState(_PasswordGenerateRequested event, Emitter<PasswordGeneratorState> emit) async {
     emit(const PasswordGeneratorInProgress());
 
+    // Convert all dates to midnight GMT for consistent password generation across timezones
+    final gmtDates = event.dates.map((date) => DateTime.utc(date.year, date.month, date.day)).toList();
+
     try {
       final stopwatch = Stopwatch()..start();
-      final password = generateUltraSecurePassword(event.strings, event.numbers, event.dates,
-          hasSpecialChars: event.hasSpecialChars, length: event.length);
+      final password = generateUltraSecurePassword(
+        event.strings,
+        event.numbers,
+        gmtDates,
+        hasSpecialChars: event.hasSpecialChars,
+        length: event.length,
+      );
       final elapsed = stopwatch.elapsed;
       LoggerHelper.debugLog('Password generation took: ${elapsed.inMilliseconds}ms');
       _mapRequestedToSuccess(

@@ -45,7 +45,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return CustomScreen(
       onInit: () {
-        Future.delayed(const Duration(seconds: 2)).then((value) async {
+        Future.delayed(const Duration(seconds: 1)).then((value) async {
           NavigatorController.pushReplacementWithoutState(context, HomePage.routeName);
         });
       },
