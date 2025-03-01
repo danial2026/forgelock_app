@@ -9,6 +9,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:forgelock/src/view/page/home/home_page.dart';
 import 'package:forgelock/src/view/widget/button.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key, required this.appPreferencesController});
@@ -22,9 +23,19 @@ class SettingPage extends StatefulWidget {
 }
 
 class _SettingPageState extends State<SettingPage> {
+  late String _version = "";
+
+  void _initPackageInfo() async {
+    final PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    setState(() {
+      _version = 'version ${packageInfo.version} + ${packageInfo.buildNumber}';
+    });
+  }
+
   @override
   void initState() {
     super.initState();
+    _initPackageInfo();
   }
 
   @override
@@ -211,7 +222,20 @@ class _SettingPageState extends State<SettingPage> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: AppPadding.xxxLarge),
+                    const SizedBox(height: AppPadding.xLarge),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          maxLines: 1,
+                          textAlign: TextAlign.center,
+                          _version,
+                          style: widget.appPreferencesController.getThemeData().textTheme.bodyMedium,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppPadding.xxLarge),
                   ],
                 ),
               ],
