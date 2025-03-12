@@ -58,6 +58,9 @@
   "customNumber": "custom number",
   "passwordLength": "Password Length",
   "visitWebsite": "🌐 Visit Website",
+  "developerWebsite": "🌐 Developer Website",
   "contactDeveloper": "📧 Contact Developer",
-  "sourceCode": "💻 Source Code"
+  "sourceCode": "💻 Source Code",
+  "termsOfService": "Terms of Service",
+  "privacyPolicy": "Privacy Policy"
 }

@@ -7,6 +7,8 @@ import 'package:forgelock/src/view/common/custom_scaffold.dart';
 import 'package:forgelock/src/view/common/custom_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:forgelock/src/view/page/home/home_page.dart';
+import 'package:forgelock/src/view/page/setting/privacy_policy_page.dart';
+import 'package:forgelock/src/view/page/setting/terms_page.dart';
 import 'package:forgelock/src/view/widget/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -62,26 +64,25 @@ class _SettingPageState extends State<SettingPage> {
                 Column(
                   children: [
                     const SizedBox(height: AppPadding.xxxLarge),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconButton(
-                          icon: const Icon(Icons.arrow_back_ios_new),
-                          iconSize: 32.0,
-                          color: widget.appPreferencesController.getThemeData().colorScheme.primary,
-                          onPressed: () {
-                            NavigatorController.pushWithoutState(context, HomePage.routeName);
-                          },
-                        ),
-                        Text(
-                          AppLocalizations.of(context)!.settings,
-                          style: Theme.of(context).textTheme.headlineMedium,
-                        ),
-                        Container(
-                          width: 32.0,
-                        ),
-                      ],
+                    AppBar(
+                      title: Text(
+                        AppLocalizations.of(context)!.settings,
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      centerTitle: true,
+                      leading: IconButton(
+                        icon: const Icon(Icons.arrow_back_ios_new),
+                        iconSize: 32.0,
+                        color: widget.appPreferencesController.getThemeData().colorScheme.primary,
+                        onPressed: () {
+                          NavigatorController.pushWithoutState(context, HomePage.routeName);
+                        },
+                      ),
                     ),
+                  ],
+                ),
+                Column(
+                  children: [
                     const SizedBox(height: AppPadding.xLarge),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -177,6 +178,7 @@ class _SettingPageState extends State<SettingPage> {
                   ],
                 ),
                 Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -184,25 +186,10 @@ class _SettingPageState extends State<SettingPage> {
                         customSecondaryButton(
                           context,
                           widget.appPreferencesController,
-                          text: AppLocalizations.of(context)!.visitWebsite,
+                          text: AppLocalizations.of(context)!.developerWebsite,
                           width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
                           onTap: () {
                             launchUrl(Uri.parse('https://danials.space/'));
-                          },
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: AppPadding.large),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        customSecondaryButton(
-                          context,
-                          widget.appPreferencesController,
-                          text: AppLocalizations.of(context)!.contactDeveloper,
-                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
-                          onTap: () {
-                            launchUrl(Uri.parse('https://danials.space/contact'));
                           },
                         ),
                       ],
@@ -218,6 +205,36 @@ class _SettingPageState extends State<SettingPage> {
                           width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
                           onTap: () {
                             launchUrl(Uri.parse('https://github.com/danial2026/forgelock_app'));
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppPadding.large),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customSecondaryButton(
+                          context,
+                          widget.appPreferencesController,
+                          text: AppLocalizations.of(context)!.termsOfService,
+                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
+                          onTap: () {
+                            NavigatorController.push(context, TermsPage.routeName);
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: AppPadding.large),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        customSecondaryButton(
+                          context,
+                          widget.appPreferencesController,
+                          text: AppLocalizations.of(context)!.privacyPolicy,
+                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
+                          onTap: () {
+                            NavigatorController.push(context, PrivacyPolicyPage.routeName);
                           },
                         ),
                       ],

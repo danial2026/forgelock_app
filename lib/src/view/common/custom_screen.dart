@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forgelock/src/view/page/error/screen_size_not_supported.dart';
 
 class CustomScreen extends StatefulWidget {
   const CustomScreen({
@@ -35,6 +36,9 @@ class CustomScreenState extends State<CustomScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (MediaQuery.of(context).size.width < 350 || MediaQuery.of(context).size.height < 660) {
+      return const ScreenSizeNotSupportedPage();
+    }
     return widget.child;
   }
 }

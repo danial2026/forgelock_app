@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:forgelock/src/bloc/generate_password/generate_password_get_bloc.dart';
+import 'package:forgelock/src/utils/router_utils.dart';
 import 'package:forgelock/src/view/page/home/home_page.dart';
+import 'package:forgelock/src/view/page/setting/privacy_policy_page.dart';
 import 'package:forgelock/src/view/page/setting/setting_page.dart';
+import 'package:forgelock/src/view/page/setting/terms_page.dart';
 import 'package:go_router/go_router.dart';
 import 'package:forgelock/src/app_preferences/app_preferences_controller.dart';
 import 'package:forgelock/src/view/common/custom_material_page.dart';
@@ -46,14 +49,33 @@ mixin BaseRouteHandler {
           },
         ),
         GoRoute(
-          path: SettingPage.routeName,
-          pageBuilder: (BuildContext context, GoRouterState state) {
-            return CustomTransitionPageBuilder(
-              key: state.pageKey,
-              child: SettingPage(appPreferencesController: appPreferencesController),
-            );
-          },
-        ),
+            path: SettingPage.routeName,
+            pageBuilder: (BuildContext context, GoRouterState state) {
+              return CustomTransitionPageBuilder(
+                key: state.pageKey,
+                child: SettingPage(appPreferencesController: appPreferencesController),
+              );
+            },
+            routes: [
+              GoRoute(
+                path: RouterUtils.removeSlash(TermsPage.routeName),
+                pageBuilder: (BuildContext context, GoRouterState state) {
+                  return CustomTransitionPageBuilder(
+                    key: state.pageKey,
+                    child: TermsPage(appPreferencesController: appPreferencesController),
+                  );
+                },
+              ),
+              GoRoute(
+                path: RouterUtils.removeSlash(PrivacyPolicyPage.routeName),
+                pageBuilder: (BuildContext context, GoRouterState state) {
+                  return CustomTransitionPageBuilder(
+                    key: state.pageKey,
+                    child: PrivacyPolicyPage(appPreferencesController: appPreferencesController),
+                  );
+                },
+              ),
+            ]),
         GoRoute(
           path: SomethingWentWrongPage.routeName,
           pageBuilder: (BuildContext context, GoRouterState state) {

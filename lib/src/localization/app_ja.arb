@@ -58,6 +58,9 @@
   "customNumber": "カスタムの数字",
   "passwordLength": "パスワードの長さ",
   "visitWebsite": "🌐 ウェブサイトを訪問",
+  "developerWebsite": "🌐 開発者のウェブサイト",
   "contactDeveloper": "📧 開発者に連絡",
-  "sourceCode": "💻 ソースコード"
+  "sourceCode": "💻 ソースコード",
+  "termsOfService": "利用規約",
+  "privacyPolicy": "プライバシーポリシー"
 }
