@@ -271,23 +271,26 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Align(
                     alignment: Alignment.bottomCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.all(AppPadding.large),
-                      child: customPrimaryButton(
-                        context,
-                        widget.appPreferencesController,
-                        text: AppLocalizations.of(context)!.generatePassword,
-                        width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
-                        onTap: () {
-                          dateTimeList.removeWhere((element) => element == null);
-                          passwordGeneratorBloc.requested(
-                            strings: textFieldControllers.map((e) => e.text).toList(),
-                            dates: dateTimeList.map((e) => e!).toList(),
-                            numbers: numberFieldControllers.map((e) => int.parse(e.text)).toList(),
-                            length: _passwordLength.toInt(),
-                            hasSpecialChars: hasSpecialChars,
-                          );
-                        },
+                    child: SafeArea(
+                      top: false,
+                      child: Padding(
+                        padding: const EdgeInsets.all(AppPadding.large),
+                        child: customPrimaryButton(
+                          context,
+                          widget.appPreferencesController,
+                          text: AppLocalizations.of(context)!.generatePassword,
+                          width: MediaQuery.of(context).size.width - AppPadding.xxLarge * 4,
+                          onTap: () {
+                            dateTimeList.removeWhere((element) => element == null);
+                            passwordGeneratorBloc.requested(
+                              strings: textFieldControllers.map((e) => e.text).toList(),
+                              dates: dateTimeList.map((e) => e!).toList(),
+                              numbers: numberFieldControllers.map((e) => int.parse(e.text)).toList(),
+                              length: _passwordLength.toInt(),
+                              hasSpecialChars: hasSpecialChars,
+                            );
+                          },
+                        ),
                       ),
                     ),
                   ),

@@ -139,7 +139,7 @@ android {
 }
 ```
 
-The APK is renamed to `forgelock-v{version}-release.apk` (version comes from pubspec: `0.1.2+6`).
+The APK is renamed to `forgelock-v{version}-release.apk` (version comes from pubspec: `0.1.3+7`).
 
 ## Step 7 — Build the signed release APK
 
@@ -149,14 +149,14 @@ JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" \
   ./gradlew assembleRelease          # run from android/
 ```
 
-Output: `build/app/outputs/apk/release/forgelock-v0.1.2-release.apk` (~55 MB)
+Output: `build/app/outputs/apk/release/forgelock-v0.1.3-release.apk` (~55 MB)
 
 Verify the signature (must NOT say `CN=Android Debug`):
 
 ```bash
 JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home" \
   "$HOME/Library/Android/sdk/build-tools/36.1.0/apksigner" verify --print-certs \
-  build/app/outputs/apk/release/forgelock-v0.1.2-release.apk
+  build/app/outputs/apk/release/forgelock-v0.1.3-release.apk
 ```
 
 ## Step 8 — Convert screenshots to Myket specs
@@ -184,7 +184,7 @@ Results: `screenshots/myket/*.png` — exact 9:16, 414x736, 32-36 KB.
 ## Step 9 — Upload to Myket
 
 1. [Myket developer panel](https://myket.ir/developer/panel) → select/create the app
-2. Upload `build/app/outputs/apk/release/forgelock-v0.1.2-release.apk`
+2. Upload `build/app/outputs/apk/release/forgelock-v0.1.3-release.apk`
 3. Upload ≥ 3 screenshots from `screenshots/myket/`
 4. App name: ForgeLock — tagline suggestion (max 26 chars, Persian):
    - «قفل امنیت حسابهای شما» (count: ۱۲+…), choose one that fits
