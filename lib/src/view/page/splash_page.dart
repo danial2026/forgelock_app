@@ -3,7 +3,7 @@ import 'package:forgelock/src/app_preferences/app_preferences_controller.dart';
 import 'package:forgelock/src/core/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:forgelock/src/view/page/home/home_page.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:forgelock/src/localization/app_localizations.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:forgelock/src/navigator/navigator_controller.dart';
 import 'package:forgelock/src/view/common/custom_scaffold.dart';

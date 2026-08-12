@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:forgelock/src/localization/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:forgelock/src/navigator/main_routes.dart';
 import 'package:forgelock/src/app_preferences/app_preferences_controller.dart';

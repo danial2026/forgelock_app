@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:forgelock/src/core/constants.dart';
 import 'package:universal_io/io.dart' as universal_io;
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:forgelock/src/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class CustomScaffold extends StatelessWidget {

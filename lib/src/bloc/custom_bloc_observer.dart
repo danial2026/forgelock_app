@@ -3,12 +3,12 @@ import 'package:bloc/bloc.dart';
 class CustomBlocObserver extends BlocObserver {
   @override
   void onTransition(Bloc bloc, Transition transition) {
-    var _out = '----------------EVENT-------------------\n';
-    _out += '${transition.event}\n';
-    _out += '----------------STATE-------------------\n';
-    _out += '${transition.currentState}\n';
-    _out += '╚> ${transition.nextState}';
-    print(_out);
+    var out = '----------------EVENT-------------------\n';
+    out += '${transition.event}\n';
+    out += '----------------STATE-------------------\n';
+    out += '${transition.currentState}\n';
+    out += '╚> ${transition.nextState}';
+    print(out);
     super.onTransition(bloc, transition);
   }
 

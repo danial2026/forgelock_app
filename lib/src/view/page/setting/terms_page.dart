@@ -4,7 +4,7 @@ import 'package:forgelock/src/core/constants.dart';
 import 'package:forgelock/src/navigator/navigator_controller.dart';
 import 'package:forgelock/src/view/common/custom_scaffold.dart';
 import 'package:forgelock/src/view/common/custom_screen.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:forgelock/src/localization/app_localizations.dart';
 class TermsPage extends StatefulWidget {
   const TermsPage({super.key, required this.appPreferencesController});
 

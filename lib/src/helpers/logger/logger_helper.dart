@@ -53,10 +53,10 @@ class _CustomLoggyPrinter extends LoggyPrinter {
 
   @override
   void onLog(LogRecord record) {
-    final String _prefix = levelPrefix(record.level) ?? _defaultPrefix;
+    final String prefix = levelPrefix(record.level) ?? _defaultPrefix;
 
     developer.log(
-      '$_prefix ${record.message}',
+      '$prefix ${record.message}',
       name: record.loggerName,
       error: record.error,
       stackTrace: record.stackTrace,

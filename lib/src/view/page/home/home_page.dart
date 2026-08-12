@@ -13,7 +13,7 @@ import 'package:forgelock/src/view/widget/loading_widget.dart';
 import 'package:forgelock/src/view/widget/snackbar_widget.dart';
 import 'package:forgelock/src/view/widget/text.dart';
 import 'package:forgelock/src/view/widget/textfield_widget.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:forgelock/src/localization/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.appPreferencesController});
@@ -358,7 +358,7 @@ class _HomePageState extends State<HomePage> {
           child: Switch(
             value: hasSpecialChars,
             onChanged: (value) => setState(() => hasSpecialChars = value),
-            activeColor: widget.appPreferencesController.getThemeData().colorScheme.surface,
+            activeThumbColor: widget.appPreferencesController.getThemeData().colorScheme.surface,
             activeTrackColor: widget.appPreferencesController.getThemeData().colorScheme.primary,
             inactiveTrackColor: widget.appPreferencesController.getThemeData().colorScheme.primary.withOpacity(0.4),
             inactiveThumbColor: widget.appPreferencesController.getThemeData().colorScheme.surface,
@@ -458,10 +458,9 @@ class _HomePageState extends State<HomePage> {
                             surface: widget.appPreferencesController.getThemeData().colorScheme.surface,
                             onSurface: widget.appPreferencesController.getThemeData().colorScheme.primary,
                           ),
-                          dialogBackgroundColor: widget.appPreferencesController.getThemeData().colorScheme.surface,
                           textSelectionTheme: TextSelectionThemeData(
                             cursorColor: widget.appPreferencesController.getThemeData().colorScheme.primary,
-                          ),
+                          ), dialogTheme: DialogThemeData(backgroundColor: widget.appPreferencesController.getThemeData().colorScheme.surface),
                         ),
                         child: child ?? Container(),
                       );
